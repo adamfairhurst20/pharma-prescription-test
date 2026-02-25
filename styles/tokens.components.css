@@ -1,0 +1,20 @@
+:root {
+  --component-button-primary-text-default: #FFFFFF;
+  --component-button-primary-text-disabled: #DBE4FF;
+  --component-button-primary-bg-default: #261DB6;
+  --component-button-primary-bg-hover: #24208F;
+  --component-button-primary-bg-pressed: #171353;
+  --component-button-primary-bg-disabled: #BECDFF;
+  --component-button-secondary-bg-default: #6E7CFF;
+  --component-button-secondary-bg-hover: #4C50FF;
+  --component-button-secondary-bg-pressed: #2F22FF;
+  --component-button-secondary-bg-disabled: #DBE4FF;
+  --component-button-secondary-text-default: #FFFFFF;
+  --component-button-secondary-text-disabled: #FFFFFF;
+  --component-button-tertiary-border-default: #708DFF;
+  --component-button-tertiary-border-hover: #4C50FF;
+  --component-button-tertiary-border-pressed: #2F22FF;
+  --component-button-tertiary-border-disabled: #BECDFF;
+  --component-button-tertiary-text-default: #121212;
+  --component-button-tertiary-text-disabled: #DBE4FF;
+}

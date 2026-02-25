@@ -1,0 +1,15 @@
+:root {
+  --semantic-text-color-text-color-default: #121212;
+  --semantic-text-color-text-color-onPrimary: #FFFFFF;
+  --semantic-text-color-text-color-secondary: #4C50FF;
+  --semantic-text-color-text-color-grey: #7F869F;
+  --semantic-text-color-text-color-link: #2F22FF;
+  --semantic-text-color-text-color-error: #D71D2D;
+  --semantic-text-color-text-color-warning: #E6B51F;
+  --semantic-text-color-text-color-success: #00CC66;
+  --semantic-text-color-text-color-disabled: #DBE4FF;
+  --semantic-action-action-primary: #261DB6;
+  --semantic-action-action-secondary: #6E7CFF;
+  --semantic-action-action-tertiary: #708DFF;
+  --semantic-action-action-focus-ring: #7F869F;
+}

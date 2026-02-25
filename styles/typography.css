@@ -1,0 +1,23 @@
+/* src/styles/typography.css */
+/* Requires tokens.primitives.css + tokens.semantic.css */
+
+html {
+  font-family: var(--font-family);
+  color: var(--semantic-text-color-default);
+}
+
+/* Body text helpers */
+.text-body { font-size: var(--font-size-16); line-height: var(--line-height-24); font-weight: 400; }
+.text-sm   { font-size: var(--font-size-14); line-height: var(--line-height-20); font-weight: 400; }
+
+.text-secondary { color: var(--semantic-text-color-secondary); }
+.text-muted     { color: var(--semantic-text-color-grey); }
+.text-link      { color: var(--semantic-text-color-link); }
+
+/* Headings */
+.h1 { font-size: var(--font-size-36); line-height: var(--line-height-44); font-weight: 700; letter-spacing: var(--letter-spacing-tight); }
+.h2 { font-size: var(--font-size-32); line-height: var(--line-height-40); font-weight: 700; }
+.h3 { font-size: var(--font-size-28); line-height: var(--line-height-36); font-weight: 600; }
+.h4 { font-size: var(--font-size-24); line-height: var(--line-height-32); font-weight: 600; }
+.h5 { font-size: var(--font-size-20); line-height: var(--line-height-28); font-weight: 600; }
+.h6 { font-size: var(--font-size-18); line-height: var(--line-height-24); font-weight: 500; }
