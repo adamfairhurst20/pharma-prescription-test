@@ -1,0 +1,114 @@
+.pharma-button {
+  box-sizing: border-box;
+  position: relative;
+  min-width: 64px;
+  min-height: 48px;
+  padding: var(--space-12) var(--space-16);
+  border-radius: var(--radius-m);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--component-button-primary-bg-default);
+  cursor: pointer;
+}
+
+.pharma-button__label {
+  flex: 0 0 auto;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-24);
+  letter-spacing: var(--letter-spacing-normal);
+  white-space: nowrap;
+  color: var(--component-button-primary-text-default);
+}
+
+.pharma-button--primary.pharma-button--default,
+.pharma-button--primary.pharma-button--focus {
+  background: var(--component-button-primary-bg-default);
+}
+
+.pharma-button--primary.pharma-button--hover {
+  background: var(--component-button-primary-bg-hover);
+}
+
+.pharma-button--primary.pharma-button--pressed {
+  background: var(--component-button-primary-bg-pressed);
+}
+
+.pharma-button--primary.pharma-button--disabled {
+  background: var(--component-button-primary-bg-disabled);
+  cursor: not-allowed;
+}
+
+.pharma-button--primary .pharma-button__label {
+  color: var(--component-button-primary-text-default);
+}
+
+.pharma-button--primary.pharma-button--disabled .pharma-button__label {
+  color: var(--component-button-primary-text-disabled);
+}
+
+.pharma-button--secondary.pharma-button--default,
+.pharma-button--secondary.pharma-button--focus {
+  background: var(--component-button-secondary-bg-default);
+}
+
+.pharma-button--secondary.pharma-button--hover {
+  background: var(--component-button-secondary-bg-hover);
+}
+
+.pharma-button--secondary.pharma-button--pressed {
+  background: var(--component-button-secondary-bg-pressed);
+}
+
+.pharma-button--secondary.pharma-button--disabled {
+  background: var(--component-button-secondary-bg-disabled);
+  cursor: not-allowed;
+}
+
+.pharma-button--secondary .pharma-button__label,
+.pharma-button--secondary.pharma-button--disabled .pharma-button__label {
+  color: var(--component-button-secondary-text-default);
+}
+
+.pharma-button--tertiary {
+  background: var(--color-white);
+  --pharma-tertiary-border-color: var(--component-button-tertiary-border-default);
+}
+
+.pharma-button--tertiary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: var(--border-2) solid var(--pharma-tertiary-border-color);
+  pointer-events: none;
+}
+
+.pharma-button--tertiary.pharma-button--hover {
+  --pharma-tertiary-border-color: var(--component-button-tertiary-border-hover);
+}
+
+.pharma-button--tertiary.pharma-button--pressed {
+  --pharma-tertiary-border-color: var(--component-button-tertiary-border-pressed);
+}
+
+.pharma-button--tertiary.pharma-button--disabled {
+  --pharma-tertiary-border-color: var(--component-button-tertiary-border-disabled);
+  cursor: not-allowed;
+}
+
+.pharma-button--tertiary .pharma-button__label {
+  color: var(--component-button-tertiary-text-default);
+}
+
+.pharma-button--tertiary.pharma-button--disabled .pharma-button__label {
+  color: var(--component-button-tertiary-text-disabled);
+}
+
+.pharma-button--focus {
+  box-shadow: 0 0 0 var(--border-3) var(--semantic-action-action-focus-ring);
+}
