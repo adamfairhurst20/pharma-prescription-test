@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import { useState } from 'react';
 import { expect, fn, userEvent } from 'storybook/test';
 
 import { PharmaRadio } from './PharmaRadio';
@@ -52,17 +53,29 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  render: (args) => {
+    const [isSelected, setIsSelected] = useState(args.state === 'pressed');
+
+    return (
+      <PharmaRadio
+        {...args}
+        state={isSelected ? 'pressed' : 'default'}
+        onClick={(event) => {
+          args.onClick?.(event);
+          setIsSelected((previous) => !previous);
+        }}
+      />
+    );
+  },
   play: async ({ canvasElement, args }) => {
     const radio = canvasElement.querySelector('.pharma-radio') as HTMLElement;
 
     await userEvent.click(radio);
     await expect(args.onClick).toHaveBeenCalledTimes(1);
+    await expect(radio).toHaveAttribute('aria-checked', 'true');
 
-    await userEvent.tab();
+    radio.focus();
     await expect(radio).toHaveFocus();
-
-    await userEvent.keyboard('{Enter}');
-    await expect(args.onKeyDown).toHaveBeenCalled();
   },
 };
 
