@@ -1,0 +1,114 @@
+.pharma-radio {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-16, 16px);
+  cursor: pointer;
+}
+
+.pharma-radio--label-hidden {
+  gap: 0;
+}
+
+.pharma-radio__control {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full, 9999px);
+  border: var(--border-2, 1.5px) solid var(--component-radio-border-default, #121212);
+  background: var(--component-radio-bg-default, #ffffff);
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.pharma-radio__text {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+.pharma-radio__label {
+  font-family: var(--font-family);
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-24);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--component-radio-text-label, #121212);
+  white-space: nowrap;
+}
+
+.pharma-radio__description {
+  font-family: var(--font-family);
+  font-size: var(--font-size-14);
+  font-weight: 400;
+  line-height: var(--line-height-20);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--component-radio-text-description, #374151);
+  white-space: nowrap;
+}
+
+.pharma-radio__dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full, 9999px);
+  background: var(--component-radio-bg-pressed, #261db6);
+  transform: translate(-50%, -50%);
+}
+
+.pharma-radio__minus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  border-radius: var(--radius-full, 9999px);
+  background: var(--color-white, #ffffff);
+  transform: translate(-50%, -50%);
+}
+
+.pharma-radio:focus {
+  outline: none;
+}
+
+.pharma-radio:focus-visible .pharma-radio__control {
+  box-shadow: 0 0 0 var(--border-3, 3px) var(--semantic-action-focus-ring, #7f869f);
+}
+
+.pharma-radio--hover .pharma-radio__control {
+  background: var(--component-radio-bg-hover, #ebf1ff);
+}
+
+.pharma-radio--default:not(.pharma-radio--disabled):hover .pharma-radio__control {
+  background: var(--component-radio-bg-hover, #ebf1ff);
+}
+
+.pharma-radio--focus .pharma-radio__control {
+  box-shadow: 0 0 0 var(--border-3, 3px) var(--semantic-action-focus-ring, #7f869f);
+}
+
+.pharma-radio--pressed .pharma-radio__control {
+  background: var(--component-radio-bg-default, #ffffff);
+}
+
+.pharma-radio--indeterminate .pharma-radio__control {
+  border-color: var(--component-radio-bg-pressed, #261db6);
+  background: var(--component-radio-bg-pressed, #261db6);
+}
+
+.pharma-radio--disabled .pharma-radio__control {
+  border-color: var(--component-radio-border-disabled, #becdff);
+  background: var(--component-radio-bg-default, #ffffff);
+}
+
+.pharma-radio--disabled {
+  cursor: not-allowed;
+}
+
+.pharma-radio--disabled .pharma-radio__label,
+.pharma-radio--disabled .pharma-radio__description {
+  color: var(--component-radio-text-disabled, #dbe4ff);
+}

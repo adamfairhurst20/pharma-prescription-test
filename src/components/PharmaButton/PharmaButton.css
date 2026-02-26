@@ -34,7 +34,15 @@
   background: var(--component-button-primary-bg-hover);
 }
 
+.pharma-button--primary.pharma-button--default:not(:disabled):hover {
+  background: var(--component-button-primary-bg-hover);
+}
+
 .pharma-button--primary.pharma-button--pressed {
+  background: var(--component-button-primary-bg-pressed);
+}
+
+.pharma-button--primary.pharma-button--default:not(:disabled):active {
   background: var(--component-button-primary-bg-pressed);
 }
 
@@ -60,7 +68,15 @@
   background: var(--component-button-secondary-bg-hover);
 }
 
+.pharma-button--secondary.pharma-button--default:not(:disabled):hover {
+  background: var(--component-button-secondary-bg-hover);
+}
+
 .pharma-button--secondary.pharma-button--pressed {
+  background: var(--component-button-secondary-bg-pressed);
+}
+
+.pharma-button--secondary.pharma-button--default:not(:disabled):active {
   background: var(--component-button-secondary-bg-pressed);
 }
 
@@ -92,7 +108,15 @@
   --pharma-tertiary-border-color: var(--component-button-tertiary-border-hover);
 }
 
+.pharma-button--tertiary.pharma-button--default:not(:disabled):hover {
+  --pharma-tertiary-border-color: var(--component-button-tertiary-border-hover);
+}
+
 .pharma-button--tertiary.pharma-button--pressed {
+  --pharma-tertiary-border-color: var(--component-button-tertiary-border-pressed);
+}
+
+.pharma-button--tertiary.pharma-button--default:not(:disabled):active {
   --pharma-tertiary-border-color: var(--component-button-tertiary-border-pressed);
 }
 
@@ -110,5 +134,13 @@
 }
 
 .pharma-button--focus {
-  box-shadow: 0 0 0 var(--border-3) var(--semantic-action-action-focus-ring);
+  box-shadow: 0 0 0 var(--border-3, 3px) var(--semantic-action-focus-ring, #7f869f);
+}
+
+.pharma-button:focus {
+  outline: none;
+}
+
+.pharma-button--default:not(:disabled):focus-visible {
+  box-shadow: 0 0 0 var(--border-3, 3px) var(--semantic-action-focus-ring, #7f869f);
 }
