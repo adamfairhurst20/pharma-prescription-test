@@ -1,0 +1,81 @@
+.pharma-checkbox {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-16, 16px);
+  cursor: pointer;
+}
+
+.pharma-checkbox--label-hidden {
+  gap: 0;
+}
+
+.pharma-checkbox__control {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-m, 8px);
+  border: var(--border-2, 1.5px) solid var(--component-checkbox-border-default, #121212);
+  background: var(--component-checkbox-bg-default, #ffffff);
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.pharma-checkbox__label {
+  font-family: var(--font-family);
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-24);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--component-checkbox-text-label, #121212);
+  white-space: nowrap;
+}
+
+.pharma-checkbox__check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 7px;
+  border-left: var(--border-2, 1.5px) solid var(--color-white, #ffffff);
+  border-bottom: var(--border-2, 1.5px) solid var(--color-white, #ffffff);
+  transform: translate(-50%, -60%) rotate(-45deg);
+}
+
+.pharma-checkbox:focus {
+  outline: none;
+}
+
+.pharma-checkbox:focus-visible .pharma-checkbox__control {
+  box-shadow: 0 0 0 var(--border-3, 3px) var(--semantic-action-focus-ring, #7f869f);
+}
+
+.pharma-checkbox--hover .pharma-checkbox__control {
+  background: var(--component-checkbox-bg-hover, #ebf1ff);
+}
+
+.pharma-checkbox--default:not(.pharma-checkbox--disabled):hover .pharma-checkbox__control {
+  background: var(--component-checkbox-bg-hover, #ebf1ff);
+}
+
+.pharma-checkbox--focus .pharma-checkbox__control {
+  box-shadow: 0 0 0 var(--border-3, 3px) var(--semantic-action-focus-ring, #7f869f);
+}
+
+.pharma-checkbox--pressed .pharma-checkbox__control {
+  border-color: var(--component-checkbox-bg-pressed, #261db6);
+  background: var(--component-checkbox-bg-pressed, #261db6);
+}
+
+.pharma-checkbox--disabled .pharma-checkbox__control {
+  border-color: var(--component-checkbox-border-disabled, #becdff);
+  background: var(--component-checkbox-bg-default, #ffffff);
+}
+
+.pharma-checkbox--disabled {
+  cursor: not-allowed;
+}
+
+.pharma-checkbox--disabled .pharma-checkbox__label {
+  color: var(--component-checkbox-text-disabled, #dbe4ff);
+}
