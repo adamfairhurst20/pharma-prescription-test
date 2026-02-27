@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
-import { useArgs } from 'storybook/preview-api';
+import { useEffect, useState } from 'react';
 import { expect, fn, userEvent } from 'storybook/test';
 
 import { PharmaCheckbox } from './PharmaCheckbox';
@@ -46,8 +46,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => {
-    const [{ isChecked }, updateArgs] = useArgs<typeof args>();
-    const checked = isChecked || args.state === 'pressed';
+    const [checked, setChecked] = useState(args.isChecked || args.state === 'pressed');
+
+    useEffect(() => {
+      setChecked(args.isChecked || args.state === 'pressed');
+    }, [args.isChecked, args.state]);
 
     return (
       <PharmaCheckbox
@@ -56,7 +59,7 @@ export const Default: Story = {
         isChecked={checked}
         onClick={(event) => {
           args.onClick?.(event);
-          updateArgs({ isChecked: !checked });
+          setChecked((previous) => !previous);
         }}
       />
     );
