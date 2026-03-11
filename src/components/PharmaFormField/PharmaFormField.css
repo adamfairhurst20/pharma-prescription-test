@@ -1,0 +1,121 @@
+.pharma-form-field {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 280px;
+}
+
+/* ── Label ── */
+
+.pharma-form-field__label {
+  font-family: var(--font-family);
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-24);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--component-form-field-label-default);
+  padding-bottom: var(--space-4, 4px);
+}
+
+.pharma-form-field--disabled .pharma-form-field__label {
+  color: var(--component-form-field-label-disabled);
+}
+
+.pharma-form-field--error .pharma-form-field__label {
+  color: var(--component-form-field-label-error);
+}
+
+/* ── Input ── */
+
+.pharma-form-field__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--space-12, 12px) var(--space-16, 16px);
+  border-radius: var(--radius-s, 4px);
+  border: var(--border-1, 1px) solid var(--component-form-field-border-default);
+  background: var(--component-form-field-bg-default);
+  font-family: var(--font-family);
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-24);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--component-form-field-text-default);
+  outline: none;
+}
+
+.pharma-form-field__input::placeholder {
+  color: var(--component-form-field-text-placeholder);
+  opacity: 1;
+}
+
+/* Hover */
+
+.pharma-form-field--hover .pharma-form-field__input,
+.pharma-form-field--default:not(.pharma-form-field--disabled) .pharma-form-field__input:hover {
+  background: var(--component-form-field-bg-hover);
+  border-color: var(--component-form-field-border-hover);
+}
+
+/* Pressed */
+
+.pharma-form-field--pressed .pharma-form-field__input {
+  border-width: var(--border-2, 2px);
+  border-color: var(--component-form-field-border-pressed);
+  background: var(--component-form-field-bg-pressed);
+}
+
+/* Focused */
+
+.pharma-form-field--focused .pharma-form-field__input,
+.pharma-form-field__input:focus-visible {
+  border-color: var(--component-form-field-border-focused);
+  background: var(--component-form-field-bg-focused);
+  box-shadow: 0 0 0 3px var(--component-form-field-focus-ring);
+}
+
+/* Disabled */
+
+.pharma-form-field--disabled .pharma-form-field__input {
+  border-color: var(--component-form-field-border-disabled);
+  background: var(--component-form-field-bg-disabled);
+  color: var(--component-form-field-text-disabled);
+  cursor: not-allowed;
+}
+
+.pharma-form-field--disabled .pharma-form-field__input::placeholder {
+  color: var(--component-form-field-text-disabled);
+}
+
+/* Error */
+
+.pharma-form-field--error .pharma-form-field__input {
+  border-color: var(--component-form-field-border-error);
+  background: var(--component-form-field-bg-error);
+  color: var(--component-form-field-text-error);
+}
+
+/* ── Helper / Error text ── */
+
+.pharma-form-field__helper,
+.pharma-form-field__error {
+  font-family: var(--font-family);
+  font-size: var(--font-size-14);
+  font-weight: 400;
+  line-height: var(--line-height-20);
+  letter-spacing: var(--letter-spacing-normal);
+  padding-top: var(--space-8, 8px);
+  white-space: nowrap;
+}
+
+.pharma-form-field__helper {
+  color: var(--component-form-field-helper-default);
+}
+
+.pharma-form-field--disabled .pharma-form-field__helper {
+  color: var(--component-form-field-helper-disabled);
+}
+
+.pharma-form-field__error {
+  color: var(--component-form-field-error-text-default);
+}

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { PharmaButton } from '@/src/components/PharmaButton/PharmaButton';
+import { PharmaCheckbox } from '@/src/components/PharmaCheckbox/PharmaCheckbox';
 import { PharmaRadio } from '@/src/components/PharmaRadio/PharmaRadio';
 
 type PrimitiveColor = {
@@ -81,9 +82,13 @@ const primitiveColorGroups: { name: string; colors: PrimitiveColor[] }[] = [
 
 export default function Home() {
   const [isSelected, setIsSelected] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
   const toggleRadio = () => {
     setIsSelected((previous) => !previous);
+  };
+  const toggleCheckbox = () => {
+    setIsChecked((previous) => !previous);
   };
 
   return (
@@ -175,6 +180,19 @@ export default function Home() {
             labelText="Medication reminders"
             descriptionText="Enable daily reminder notifications"
             onClick={toggleRadio}
+          />
+        </div>
+
+        <div style={{ display: 'grid', gap: 32 }}>
+          <h2 className="h4" style={{ margin: 0, fontWeight: 700 }}>
+            Pharma Checkbox
+          </h2>
+
+          <PharmaCheckbox
+            state={isChecked ? 'pressed' : 'default'}
+            label
+            labelText="Accept prescription terms"
+            onClick={toggleCheckbox}
           />
         </div>
       </section>
