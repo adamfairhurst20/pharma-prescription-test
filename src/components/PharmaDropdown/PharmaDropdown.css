@@ -1,0 +1,156 @@
+.pharma-dropdown {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 280px;
+}
+
+/* ── Label ── */
+
+.pharma-dropdown__label {
+  font-family: var(--font-family);
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-24);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--component-form-field-label-default);
+  padding-bottom: var(--space-4, 4px);
+}
+
+.pharma-dropdown--disabled .pharma-dropdown__label {
+  color: var(--component-form-field-label-disabled);
+}
+
+.pharma-dropdown--error .pharma-dropdown__label {
+  color: var(--component-form-field-label-error);
+}
+
+/* ── Select wrapper ── */
+
+.pharma-dropdown__select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* ── Select ── */
+
+.pharma-dropdown__select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--space-12, 12px) var(--space-16, 16px);
+  padding-right: 48px;
+  border-radius: var(--radius-s, 4px);
+  border: var(--border-1, 1px) solid var(--component-form-field-border-default);
+  background: var(--component-form-field-bg-default);
+  font-family: var(--font-family);
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-24);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--component-form-field-text-default);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.pharma-dropdown__select--empty {
+  color: var(--component-form-field-text-placeholder);
+}
+
+/* Hover */
+
+.pharma-dropdown--hover .pharma-dropdown__select,
+.pharma-dropdown--default:not(.pharma-dropdown--disabled) .pharma-dropdown__select:hover {
+  background: var(--component-form-field-bg-hover);
+  border-color: var(--component-form-field-border-hover);
+}
+
+/* Pressed */
+
+.pharma-dropdown--pressed .pharma-dropdown__select {
+  border-width: var(--border-2, 2px);
+  border-color: var(--component-form-field-border-pressed);
+  background: var(--component-form-field-bg-pressed);
+}
+
+/* Focused */
+
+.pharma-dropdown--focused .pharma-dropdown__select,
+.pharma-dropdown__select:focus-visible {
+  border-color: var(--component-form-field-border-focused);
+  background: var(--component-form-field-bg-focused);
+  box-shadow: 0 0 0 3px var(--component-form-field-focus-ring);
+}
+
+/* Disabled */
+
+.pharma-dropdown--disabled .pharma-dropdown__select {
+  border-color: var(--component-form-field-border-disabled);
+  background: var(--component-form-field-bg-disabled);
+  color: var(--component-form-field-text-disabled);
+  cursor: not-allowed;
+}
+
+.pharma-dropdown--disabled .pharma-dropdown__select--empty {
+  color: var(--component-form-field-text-disabled);
+}
+
+/* Error */
+
+.pharma-dropdown--error .pharma-dropdown__select {
+  border-color: var(--component-form-field-border-error);
+  background: var(--component-form-field-bg-error);
+  color: var(--component-form-field-text-error);
+}
+
+.pharma-dropdown--error .pharma-dropdown__select--empty {
+  color: var(--component-form-field-text-placeholder);
+}
+
+/* ── Chevron icon ── */
+
+.pharma-dropdown__icon {
+  position: absolute;
+  right: var(--space-16, 16px);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  color: var(--component-form-field-icon-default);
+}
+
+.pharma-dropdown--disabled .pharma-dropdown__icon {
+  color: var(--component-form-field-icon-disabled);
+}
+
+.pharma-dropdown--error .pharma-dropdown__icon {
+  color: var(--component-form-field-icon-error);
+}
+
+/* ── Helper / Error text ── */
+
+.pharma-dropdown__helper,
+.pharma-dropdown__error {
+  font-family: var(--font-family);
+  font-size: var(--font-size-14);
+  font-weight: 400;
+  line-height: var(--line-height-20);
+  letter-spacing: var(--letter-spacing-normal);
+  padding-top: var(--space-8, 8px);
+  white-space: nowrap;
+}
+
+.pharma-dropdown__helper {
+  color: var(--component-form-field-helper-default);
+}
+
+.pharma-dropdown--disabled .pharma-dropdown__helper {
+  color: var(--component-form-field-helper-disabled);
+}
+
+.pharma-dropdown__error {
+  color: var(--component-form-field-error-text-default);
+}
