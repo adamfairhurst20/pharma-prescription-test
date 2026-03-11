@@ -18,9 +18,9 @@
   text-align: center;
   font-family: var(--font-family);
   font-size: var(--font-size-16);
-  font-weight: 400;
+  font-weight: 600;
   line-height: var(--line-height-24);
-  letter-spacing: var(--letter-spacing-normal);
+  letter-spacing: var(--letter-spacing-wide);
   white-space: nowrap;
   color: var(--component-button-primary-text-default);
 }
